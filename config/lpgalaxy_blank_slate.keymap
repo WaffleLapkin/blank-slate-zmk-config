@@ -99,7 +99,7 @@
 &none      &none      &kp HASH     &kp DOLLAR   &kp F1     &kp F2     &kp F3     &kp F4     &kp N1     &kp N2     &kp N3     &kp N4
 &none      &none      &kp CARET    &kp PERCENT  &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
 &none      &none      &kp C_VOL_DN &kp C_VOL_UP &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
-&none      &none      &none        &kp C_MUTE   &none      &none      &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DOWN
+&none      &none      &none        &kp C_MUTE   &none      &none      &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
             >;
         };
 
