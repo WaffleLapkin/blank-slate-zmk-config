@@ -18,7 +18,7 @@
 #define FNL_EN 4
 #define FNL_RU 5
 #define FNR_EN 6
-#define FNR_EN 7
+#define FNR_RU 7
 #define FNG 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
