@@ -66,7 +66,7 @@
             bindings = <
  &kp Q      &kp W         &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S         &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
- &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader // temporary, p. should be &kp ESC
+ &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader
  &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BACK    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
@@ -76,7 +76,7 @@
             bindings = <
  &sh Q      &sh W      &sh E      &sh R       &sh T          &kp LT         &kp GT         &sh Y          &sh U       &sh I      &sh O         &sh P
  &sh A      &sh S      &sh D      &sh F       &sh G          &kp LBKT       &kp RBKT       &sh H          &sh J       &sh K      &sh L         &kp DQT
- &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader // temporary, p. should be &sh ESC
+ &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader
  &kp LCTRL  &none      &sh LGUI   &sh LALT    &mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &sh UP     &sh DOWN      &sh RIGHT
             >;
         };
@@ -86,7 +86,7 @@
             bindings = <
  &kp Q      &kp W         &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S         &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
- &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader // temporary, p. should be &kp ESC
+ &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader
  &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BACK    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
@@ -96,7 +96,7 @@
             bindings = <
  &sh Q      &sh W      &sh E      &sh R       &sh T          &kp LT         &kp GT         &sh Y          &sh U       &sh I      &sh O         &sh P
  &sh A      &sh S      &sh D      &sh F       &sh G          &kp LBKT       &kp RBKT       &sh H          &sh J       &sh K      &sh L         &kp DQT
- &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader // temporary, p. should be &sh ESC
+ &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader
  &kp LCTRL  &none      &sh LGUI   &sh LALT    &mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &sh UP     &sh DOWN      &sh RIGHT
             >;
         };
@@ -130,8 +130,6 @@
 &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
             >;
         };
-
-
     };
 };
 
