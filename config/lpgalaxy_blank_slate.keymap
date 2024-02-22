@@ -56,7 +56,7 @@
             bindings = <
  &kp Q      &kp W         &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S         &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
- &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader
+ &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &kp ESC
  &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
@@ -66,7 +66,7 @@
             bindings = <
  &kp LS(Q)  &kp LS(W)  &kp LS(E)    &kp LS(R)    &kp LS(T)      &kp LT         &kp GT         &kp LS(Y)      &kp LS(U)   &kp LS(I)  &kp LS(O)     &kp LS(P)
  &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)    &kp LS(G)      &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)  &kp LS(L)     &kp DQT
- &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)    &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE  &kp LS(UP)    &bootloader
+ &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)    &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE  &kp LS(UP)    &bootloader // temporary
  &kp LCTRL  &none      &kp LS(LGUI) &kp LS(LALT) &mo FNL        &kp AMPS       &kp STAR       &mo FNR        &kp DEL     &kp LS(UP) &kp LS(DOWN)  &kp LS(RIGHT)
             >;
         };
