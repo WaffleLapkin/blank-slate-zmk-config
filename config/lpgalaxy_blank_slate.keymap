@@ -57,7 +57,7 @@
  &kp Q      &kp W         &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S         &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
  &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader
- &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BACK    &kp LEFT   &kp DOWN      &kp RIGHT
+ &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
 
@@ -77,7 +77,7 @@
  &kp Q      &kp W         &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S         &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
  &kp Z      &kp X         &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &bootloader
- &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BACK    &kp LEFT   &kp DOWN      &kp RIGHT
+ &kp LCTRL  &mo SHIFT_EN  &kp LALT   &kp ENTER   &mo FNL        &kp CAPS       &kp SPACE        &mo FNR        &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
 
