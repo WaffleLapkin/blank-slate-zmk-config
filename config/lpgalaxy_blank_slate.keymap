@@ -36,16 +36,6 @@
             tap-ms = <5>;
             bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
         )
-
-        sh: sh {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
     };
     
     tap_dances {
@@ -74,10 +64,10 @@
         shifted_en_layer {
             label = "Shifted EN";
             bindings = <
- &sh Q      &sh W      &sh E      &sh R       &sh T          &kp LT         &kp GT         &sh Y          &sh U       &sh I      &sh O         &sh P
- &sh A      &sh S      &sh D      &sh F       &sh G          &kp LBKT       &kp RBKT       &sh H          &sh J       &sh K      &sh L         &kp DQT
- &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader
- &kp LCTRL  &none      &sh LGUI   &sh LALT    &mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &sh UP     &sh DOWN      &sh RIGHT
+ &kp LS(Q)  &kp LS(W)  &kp LS(E)    &kp LS(R)   &kp LS(T)      &kp LT         &kp GT         &kp LS(Y)      &kp LS(U)   &kp LS(I)  &kp LS(O)     &kp LS(P)
+ &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)   &kp LS(G)      &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)  &kp LS(L)     &kp DQT
+ &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)   &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE  &kp LS(UP)    &bootloader
+ &kp LCTRL  &none      &kp LS(LGUI) &kp LS(LALT)&mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &kp LS(UP) &kp LS(DOWN)  &kp LS(RIGHT)
             >;
         };
 
@@ -94,10 +84,10 @@
         shifted_ru_layer {
             label = "Shifted RU";
             bindings = <
- &sh Q      &sh W      &sh E      &sh R       &sh T          &kp LT         &kp GT         &sh Y          &sh U       &sh I      &sh O         &sh P
- &sh A      &sh S      &sh D      &sh F       &sh G          &kp LBKT       &kp RBKT       &sh H          &sh J       &sh K      &sh L         &kp DQT
- &sh Z      &sh X      &sh C      &sh V       &sh B          &kp SLASH      &kp BACKSLASH  &sh N          &sh M       &kp TILDE  &sh UP        &bootloader
- &kp LCTRL  &none      &sh LGUI   &sh LALT    &mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &sh UP     &sh DOWN      &sh RIGHT
+ &kp LS(Q)  &kp LS(W)  &kp LS(E)    &kp LS(R)   &kp LS(T)      &kp LT         &kp GT         &kp LS(Y)      &kp LS(U)   &kp LS(I)  &kp LS(O)     &kp LS(P)
+ &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)   &kp LS(G)      &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)  &kp LS(L)     &kp DQT
+ &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)   &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE  &kp LS(UP)    &bootloader
+ &kp LCTRL  &none      &kp LS(LGUI) &kp LS(LALT)&mo NAV_L      &kp AMPS       &kp STAR       &mo NUM_L      &kp DEL     &kp LS(UP) &kp LS(DOWN)  &kp LS(RIGHT)
             >;
         };
 
