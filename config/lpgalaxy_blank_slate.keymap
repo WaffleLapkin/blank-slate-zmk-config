@@ -19,7 +19,7 @@
 #define FNL_RU 5
 #define FNR_EN 6
 #define FNR_RU 7
-#define FNG 8
+#define L4D2 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -99,7 +99,7 @@
 &none      &none      &kp HASH     &kp DOLLAR   &kp F1     &kp F2     &kp F3     &kp F4     &kp N1     &kp N2     &kp N3     &kp N4
 &none      &none      &kp CARET    &kp PERCENT  &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
 &none      &none      &kp C_VOL_DN &kp C_VOL_UP &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
-&none      &none      &none        &kp C_MUTE   &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
+&mo L4D2   &none      &none        &kp C_MUTE   &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
             >;
         };
 
@@ -133,15 +133,15 @@
             >;
         };
 
-        gaming_switch_layer {
-            label = "Gaming Switch Layer";
+        game_left4dead2_layer {
+            label = "Game: left4dead2"
             bindings = <
-&none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
-&none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
-&none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
-&none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
+&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none      &none      &none      &none      &none      &none      &mo BASE_EN
+&none      &kp W      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
+&kp A      &kp S      &kp D      &kp F      &none      &none      &none      &none      &none      &none      &none      &none
+&kp LCTRL      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none
             >;
-        };
+        }
     };
 };
 
