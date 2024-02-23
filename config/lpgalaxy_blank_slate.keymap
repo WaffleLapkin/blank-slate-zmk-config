@@ -142,6 +142,16 @@
 &kp LCTRL  &kp LSHIFT &kp SPACE  &kp SPACE  &none      &none      &none      &none      &none      &none      &none       &none
             >;
         };
+
+        game_risk_or_rain_returns_layer {
+            label = "Game: Risk of Rain: Returns";
+            bindings = <
+&kp Q      &kp W      &kp E      &kp R      &none      &none      &none      &none      &none      &none      &to BASE_EN &none
+&kp A      &kp S      &kp D      &kp F      &none      &none      &none      &none      &none      &none      &none       &none
+&kp Z      &kp X      &kp C      &kp V      &none      &none      &none      &none      &none      &kp J      &kp UP      &kp K
+&none      &none      &kp SPACE  &kp SPACE  &none      &none      &none      &none      &kp ESC    &kp LEFT   &kp DOWN    &kp RIGHT
+            >;
+        };
     };
 };
 
