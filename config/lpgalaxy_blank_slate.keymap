@@ -70,7 +70,7 @@
  &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)    &kp LS(G)      &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)    &kp LS(L)     &kp SQT
  &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)    &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE    &kp LS(UP)    &bootloader // temporary
  &kp LCTRL  &none      &kp LS(LGUI) &kp LS(LALT) &mo FNL_EN     &kp AMPS       &kp STAR       &mo FNR_EN     &kp DEL     &kp LS(LEFT) &kp LS(DOWN)  &kp LS(RIGHT)
-            >;
+            >; //                                ^^^^^^^^^^ -- fixme: this should be a different layer, say SHIFTED_FNL_EN, cause otherwise shift+fnl+pg_up does not work (:)
         };
 
         base_ru_layer {
