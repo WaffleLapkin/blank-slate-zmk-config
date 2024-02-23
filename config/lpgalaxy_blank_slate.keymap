@@ -20,6 +20,7 @@
 #define FNR_EN 6
 #define FNR_RU 7
 #define L4D2 8
+#define RORR 9
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -98,7 +99,7 @@
             bindings = <
 &none      &none      &kp HASH     &kp DOLLAR   &kp F1     &kp F2     &kp F3     &kp F4     &kp N1     &kp N2     &kp N3     &kp N4
 &none      &none      &kp CARET    &kp PERCENT  &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
-&none      &none      &kp C_VOL_DN &kp C_VOL_UP &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
+&to RORR   &none      &kp C_VOL_DN &kp C_VOL_UP &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
 &to L4D2   &none      &none        &kp C_MUTE   &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
             >;
         };
