@@ -116,7 +116,7 @@
         qtru: quotes_ru {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N2)>, <none>; // FIXME: single quote is now writable on йцукен
+            bindings = <&kp LS(N2)>, <&none>; // FIXME: single quote is now writable on йцукен
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
