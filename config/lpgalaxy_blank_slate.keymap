@@ -30,6 +30,18 @@
          zmk,matrix_transform = &ortho_transform;
     };
 
+    macros {
+        swlng: switch_language {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&to MACRO_PLACEHOLDER>
+                , <&macro_tap &kp CAPS>
+                ;
+        };
+    };
+
     behaviors {
         lp0: left_paired_0 {
             compatible = "zmk,behavior-mod-morph";
@@ -73,10 +85,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lp3: left_paired_3 {
+        lp3_en: left_paired_3_en {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>, <&kp AMPS>;
+            bindings = <&swlng BASE_RU>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lp3_ru: left_paired_3_ru {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&swlng BASE_EN>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -94,6 +113,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        qtru: quotes {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N2)>, <none>; // FIXME: single quote is now writable on йцукен
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         grtld: grave_n_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -108,20 +134,20 @@
         base_en_layer {
             label = "Base EN";
             bindings = <
- &kp Q      &kp W       &kp E      &kp R       &kp T        &lp0  &rp0   &kp Y          &kp U       &kp I     &kp O         &kp P
- &kp A      &kp S       &kp D      &kp F       &kp G        &lp1  &rp1   &kp H          &kp J       &kp K     &kp L         &qt
- &kp Z      &kp X       &kp C      &kp V       &kp B        &lp2  &rp2   &kp N          &kp M       &grtld    &kp UP        &kp ESC
- &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN   &lp3  &rp3   &mo FNR_EN     &kp BSPC    &kp LEFT  &kp DOWN      &kp RIGHT
+ &kp Q      &kp W       &kp E      &kp R       &kp T        &lp0    &rp0   &kp Y          &kp U       &kp I     &kp O         &kp P
+ &kp A      &kp S       &kp D      &kp F       &kp G        &lp1    &rp1   &kp H          &kp J       &kp K     &kp L         &qt
+ &kp Z      &kp X       &kp C      &kp V       &kp B        &lp2    &rp2   &kp N          &kp M       &grtld    &kp UP        &kp ESC
+ &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN   &lp3_en &rp3   &mo FNR_EN     &kp BSPC    &kp LEFT  &kp DOWN      &kp RIGHT
             >;
         };
 
         base_ru_layer {
             label = "Base RU";
             bindings = <
- &kp Q      &kp W               &kp E      &kp R       &kp T          &kp LPAR       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
- &kp A      &kp S               &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
- &kp Z      &kp X               &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &kp ESC
- &kp LCTRL  &kp LSHIFT &kp LALT   &kp ENTER   &mo FNL_RU     &kp CAPS       &kp SPACE        &mo FNR_RU     &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
+ &kp Q      &kp W       &kp E      &kp R       &kp T        &kp Y     &kp U   &kp I        &kp O       &kp P     &kp LBKT   &kp RBKT
+ &kp A      &kp S       &kp D      &kp F       &kp G        &kp H     &kp J   &kp K        &kp L       &kp SEMI  &kp SQT    &qtru
+ &kp Z      &kp X       &kp C      &kp V       &kp B        &kp N     &kp M   &kp COMMA    &kp DOT     &grave    &kp UP     &kp ESC
+ &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_RU   &lp3_ru   &rp3    &mo FNR_RU   &kp BSPC    &kp LEFT  &kp DOWN   &kp RIGHT
             >;
         };
 
