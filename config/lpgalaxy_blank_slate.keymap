@@ -12,16 +12,13 @@
 #define MACRO_PLACEHOLDER 0
 
 #define BASE_EN 0
-#define SHIFT_EN 1
-#define BASE_RU 2
-#define SHIFT_RU 3
-#define FNL_EN 4
-#define FNL_EN_SHIFT 5
-#define FNL_RU 6
-#define FNR_EN 7
-#define FNR_RU 8
-#define L4D2 9
-#define RORR 10
+#define BASE_RU 1
+#define FNL_EN 2
+#define FNL_RU 3
+#define FNR_EN 4
+#define FNR_RU 5
+#define L4D2 6
+#define RORR 7
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -47,6 +44,62 @@
             bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        lp1: left_paired_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rp1: right_paired_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lp2: left_paired_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rp2: right_paired_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lp3: left_paired_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS>, <&kp SPACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rp3: right_paired_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp STAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        qt: quotes {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        grtld: grave_n_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -55,20 +108,10 @@
         base_en_layer {
             label = "Base EN";
             bindings = <
- &kp Q      &kp W                &kp E      &kp R       &kp T          &lp0       &rp0         &kp Y          &kp U       &kp I      &kp O         &kp P
- &kp A      &kp S                &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
- &kp Z      &kp X                &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &kp ESC
- &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN     &kp CAPS       &kp SPACE        &mo FNR_EN     &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
-            >;
-        };
-
-        shifted_en_layer {
-            label = "Shifted EN";
-            bindings = <
- &kp LS(Q)  &kp LS(W)  &kp LS(E)    &kp LS(R)     &kp LS(T)        &kp LT         &kp GT         &kp LS(Y)      &kp LS(U)   &kp LS(I)    &kp LS(O)     &kp LS(P)
- &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)     &kp LS(G)        &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)    &kp LS(L)     &kp SQT
- &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)     &kp LS(B)        &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE    &kp LS(UP)    &kp LS(ESC)
- &kp LCTRL  &none      &kp LS(LALT) &kp LS(ENTER) &mo FNL_EN_SHIFT &kp AMPS       &kp STAR       &mo FNR_EN     &kp DEL     &kp LS(LEFT) &kp LS(DOWN)  &kp LS(RIGHT)
+ &kp Q      &kp W       &kp E      &kp R       &kp T        &lp0  &rp0   &kp Y          &kp U       &kp I      &kp O         &kp P
+ &kp A      &kp S       &kp D      &kp F       &kp G        &lp1  &rp1   &kp H          &kp J       &kp K      &kp L         &kp DQT
+ &kp Z      &kp X       &kp C      &kp V       &kp B        &lp2  &rp2   &kp N          &kp M       &kp grtld  &kp UP        &kp ESC
+ &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN   &lp3  &rp3   &mo FNR_EN     &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
 
@@ -82,33 +125,13 @@
             >;
         };
 
-        shifted_ru_layer {
-            label = "Shifted RU";
-            bindings = <
- &kp LS(Q)  &kp LS(W)  &kp LS(E)    &kp LS(R)     &kp LS(T)      &kp LT         &kp GT         &kp LS(Y)      &kp LS(U)   &kp LS(I)    &kp LS(O)     &kp LS(P)
- &kp LS(A)  &kp LS(S)  &kp LS(D)    &kp LS(F)     &kp LS(G)      &kp LBKT       &kp RBKT       &kp LS(H)      &kp LS(J)   &kp LS(K)    &kp LS(L)     &kp SQT
- &kp LS(Z)  &kp LS(X)  &kp LS(C)    &kp LS(V)     &kp LS(B)      &kp SLASH      &kp BACKSLASH  &kp LS(N)      &kp LS(M)   &kp TILDE    &kp LS(UP)    &kp LS(ESC)
- &kp LCTRL  &none      &kp LS(LALT) &kp LS(ENTER) &mo FNL_RU     &kp AMPS       &kp STAR       &mo FNR_RU     &kp DEL     &kp LS(LEFT) &kp LS(DOWN)  &kp LS(RIGHT)
-            >;
-        };
-
         left_function_en_layer {
             label = "Left Function [EN]";
             bindings = <
 &none      &none      &kp HASH     &kp DOLLAR   &kp F1     &kp F2     &kp F3     &kp F4     &kp N1     &kp N2     &kp N3     &kp N4
 &none      &none      &kp CARET    &kp PERCENT  &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
 &to RORR   &none      &kp C_VOL_DN &kp C_VOL_UP &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
-&to L4D2   &none      &none        &kp C_MUTE   &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
-            >;
-        };
-
-        left_function_shifted_en_layer {
-            label = "Left Function [EN+shift]";
-            bindings = <
-&none &none &kp HASH     &kp DOLLAR   &kp LS(F1) &kp LS(F2)   &kp LS(F3)  &kp LS(F4)  &kp N1     &kp N2     &kp N3       &kp N4
-&none &none &kp CARET    &kp PERCENT  &kp LS(F5) &kp LS(F6)   &kp LS(F7)  &kp LS(F8)  &kp N5     &kp N6     &kp N7       &kp N8
-&none &none &kp C_VOL_DN &kp C_VOL_UP &kp LS(F9) &kp LS(F10)  &kp LS(F11) &kp LS(F12) &kp N9     &kp N0     &kp LS(HOME) &kp LS(PG_UP)
-&none &none &none        &kp C_MUTE   &none      &kp LS(LGUI) &none       &none       &kp MINUS  &kp PLUS   &kp LS(END)  &kp LS(PG_DN)
+&to L4D2   &kp LSHFT  &none        &kp C_MUTE   &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
             >;
         };
 
