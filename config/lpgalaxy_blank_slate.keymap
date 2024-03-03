@@ -62,28 +62,28 @@
         lp2: left_paired_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp SEMI>;
+            bindings = <&kp COLON>, <&kp SLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         rp2: right_paired_2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+            bindings = <&kp SEMI>, <&kp BACKSLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         lp3: left_paired_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>, <&kp SPACE>;
+            bindings = <&kp CAPS>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         rp3: right_paired_3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp STAR>;
+            bindings = <&kp SPACE>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
