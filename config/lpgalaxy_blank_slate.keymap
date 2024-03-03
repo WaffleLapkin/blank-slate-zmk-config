@@ -40,6 +40,13 @@
             bindings = <&kp LPAR>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        rp0: right_paired_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -48,10 +55,10 @@
         base_en_layer {
             label = "Base EN";
             bindings = <
- &kp Q      &kp W                &kp E      &kp R       &kp T          &lp0       &kp RPAR         &kp Y          &kp U       &kp I      &kp O         &kp P
+ &kp Q      &kp W                &kp E      &kp R       &kp T          &lp0       &kp rp0         &kp Y          &kp U       &kp I      &kp O         &kp P
  &kp A      &kp S                &kp D      &kp F       &kp G          &kp LBRC       &kp RBRC         &kp H          &kp J       &kp K      &kp L         &kp DQT
  &kp Z      &kp X                &kp C      &kp V       &kp B          &kp COLON      &kp SEMI         &kp N          &kp M       &kp GRAVE  &kp UP        &kp ESC
- &kp LCTRL  &lt LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN     &kp CAPS       &kp SPACE        &mo FNR_EN     &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
+ &kp LCTRL  &kp LSHIFT  &kp LALT   &kp ENTER   &mo FNL_EN     &kp CAPS       &kp SPACE        &mo FNR_EN     &kp BSPC    &kp LEFT   &kp DOWN      &kp RIGHT
             >;
         };
 
