@@ -19,6 +19,7 @@
 #define FNR_RU 5
 #define L4D2 6
 #define RORR 7
+#define ROUNDS 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -168,7 +169,7 @@
             label = "Left Function [EN]";
             bindings = <
 &none      &none      &kp HASH      &kp DOLLAR  &kp F1     &kp F2     &kp F3     &kp F4     &kp N1     &kp N2     &kp N3     &kp N4
-&none      &none      &kp CARET     &kp PERCENT     &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
+&to ROUNDS &none      &kp CARET     &kp PERCENT     &kp F5     &kp F6     &kp F7     &kp F8     &kp N5     &kp N6     &kp N7     &kp N8
 &to RORR   &none      &kp C_VOL_DN  &kp C_VOL_UP    &kp F9     &kp F10    &kp F11    &kp F12    &kp N9     &kp N0     &kp HOME   &kp PG_UP
 &to L4D2   &kp LSHFT  &none         &kp C_MUTE      &none      &kp LGUI   &none      &none      &kp MINUS  &kp PLUS   &kp END    &kp PG_DN
             >;
@@ -221,6 +222,17 @@
 &kp A      &kp S      &kp D      &kp F      &none      &none      &none      &none      &none      &none      &none       &none
 &kp Z      &kp X      &kp C      &kp V      &none      &none      &none      &none      &none      &kp J      &kp UP      &kp K
 &none      &none      &kp SPACE  &kp SPACE  &none      &none      &none      &none      &kp ESC    &kp LEFT   &kp DOWN    &kp RIGHT
+            >;
+        };
+
+
+        game_rounds_layer {
+            label = "Game: Rounds";
+            bindings = <
+&none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &to BASE_EN &none
+&none      &kp W      &none      &none      &none      &none      &none      &none      &none      &none      &none       &none
+&kp A      &kp S      &kp D      &none      &none      &none      &none      &none      &none      &none      &none       &none
+&none      &none      &kp SPACE  &kp SPACE  &none      &none      &none      &none      &none      &none      &none       &none
             >;
         };
     };
