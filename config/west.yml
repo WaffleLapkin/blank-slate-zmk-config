@@ -4,10 +4,16 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: lazerwalker
+      url-base: https://github.com/lazerwalker
   projects:
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: lazerwalker
+      revision: plover-hid-hog-attempt
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
